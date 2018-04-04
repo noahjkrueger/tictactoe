@@ -1,17 +1,14 @@
 /*
  * extends tictactoe.java
- *
- *test 2.0
+ * two player mode for tictactoe.java
  *
  * @author Noah Krueger, Shardul Joshi
  * @version 4/3/18
  */
 import java.util.Scanner;
-import java.util.Random;
 public class ttt2p{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
-        Random gen = new Random();
         
         System.out.println("Player 1, enter your name:");
         String p1 = input.nextLine();
@@ -20,25 +17,27 @@ public class ttt2p{
         System.out.println("Player 2, enter your name:");
         String p2 = input.nextLine();
         int p2wins = 0;
-        
-        String play = "";
-        int n=-1, r=9;
+
+        int turn=0; 
         
         String one="1", two="2", three="3",four="4",five="5",six="6",seven="7",eight="8",nine="9";
-        /*
-         *1 | 2 | 3
-         *----------
-         *4 | 5 | 6
-         *----------
-         *7 | 8 | 9
-         */
+        /*starting board
+        *1 | 2 | 3
+        *----------
+        *4 | 5 | 6
+        *----------
+        *7 | 8 | 9
+        */
         String gameboard ="";
-        while(true){
-            while(r>0){
-                n = r;
-                n%=2;
+        String agian="";
+        String play ="";
+        boolean game = true, exit = false;
+        while(exit==false){
+            for(int r = 9; r>0; r--){
+                turn=r;
+                turn%=2;
                 gameboard =  one+" | "+two+" | "+three+"\n---------\n"+four+" | "+five+" | "+six+"\n---------\n"+seven+" | "+eight+" | "+nine;
-                if(n==1){
+                if(turn==1){
                     System.out.println(gameboard);
                     while(true){
                         System.out.println(p1+"'s turn! Type a letter to play your X!");
@@ -80,9 +79,8 @@ public class ttt2p{
                             break;
                             }
                         }
-                    r--;
                     }
-                else if(n==0){
+                else if(turn==0){
                     System.out.println(gameboard);
                     while(true){
                         System.out.println(p2+"'s turn! Type a letter to play your O!");
@@ -124,13 +122,23 @@ public class ttt2p{
                             break;
                             }
                         }
-                    r--;
                     }
+                //win conditions here, dont forget to add to score
                 }
-            System.out.println(gameboard);
-            System.out.println("Tie!");
-            break;
+            while(true){
+                System.out.println("The score is "+p1+" with "+p1wins+" wins and "+p2+" with "+p2wins+" wins.\nWould you like to play agian? Y/N");
+                agian = input.nextLine();
+                if(agian.equals("Y")){
+                    game = true;
+                    break;
+                }
+                else if(agian.equals("N")){
+                    exit = true;
+                    break;
+                }
+                agian="";
+                
             }
         }
-            //exit option
     }
+}
