@@ -15,7 +15,7 @@
  */
 import java.util.Scanner;
 import java.util.Random;
-public class tictactoe{
+public class TicTacToe{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         Random gen = new Random();
@@ -50,14 +50,14 @@ public class tictactoe{
                 if(players == 1)
                     oneplayer = true;
                 if(players == 2)
-                    ttt2p.main(null);
+                    TwoPlayer.main(null);
                 while(oneplayer){
                     System.out.println("(E)asy or (H)ard computer?");
                     select= input.nextLine();
                     if(select.equals("E"))
-                        ttt1pe.main(null);
+                        EasyComputer.main(null);
                     if(select.equals("H"))
-                        ttt1ph.main(null);
+                        HardComputer.main(null);
                 }
                 select="";
             }
