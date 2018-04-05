@@ -60,6 +60,7 @@ public class tictactoe{
                         ttt1ph.main(null);
                 }
                 select="";
+                break;
             }
             while(howto){
                 System.out.println("HOW TO PLAY!");

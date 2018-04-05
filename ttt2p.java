@@ -1,8 +1,7 @@
 /*
  * extends tictactoe.java
  * two player mode for tictactoe.java
- *
- *test
+
  *
  * @author Noah Krueger, Shardul Joshi
  * @version 4/3/18
@@ -42,7 +41,7 @@ public class ttt2p{
                 if(turn==1){
                     System.out.println(gameboard);
                     while(true){
-                        System.out.println(p1+"'s turn! Type a letter to play your X!");
+                        System.out.println(p1+"'s turn! Type a number to play your X!");
                         play = input.nextLine();
                         if(play.equals("1")&&!one.equals("O")){
                             one="X";
@@ -85,7 +84,7 @@ public class ttt2p{
                 else if(turn==0){
                     System.out.println(gameboard);
                     while(true){
-                        System.out.println(p2+"'s turn! Type a letter to play your O!");
+                        System.out.println(p2+"'s turn! Type a number to play your O!");
                         play = input.nextLine();
                         if(play.equals("1")&&!one.equals("X")){
                             one="O";
