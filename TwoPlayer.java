@@ -20,16 +20,8 @@ public class TwoPlayer{
         String p2 = input.nextLine();
         int p2wins = 0;
         
-        String[]gameboard = new String[10];//including 0, so 10 is needed.
-        gameboard[1] = "1";
-        gameboard[2] = "2";
-        gameboard[3] = "3";
-        gameboard[4] = "4";
-        gameboard[5] = "5";
-        gameboard[6] = "6";
-        gameboard[7] = "7";
-        gameboard[8] = "8";
-        gameboard[9] = "9";
+        String[]gameboard = new String[10]; //including 0, so 10 is needed.
+        
         /* starting game board
         *1 | 2 | 3
         *----------
