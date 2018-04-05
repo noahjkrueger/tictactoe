@@ -5,7 +5,7 @@
  *test
  *
  * @author Noah Krueger, Shardul Joshi
- * @version 4/3/18
+ * @version 4/5/18
  */
 import java.util.Scanner;
 public class TwoPlayer{
@@ -19,18 +19,8 @@ public class TwoPlayer{
         System.out.println("Player 2, enter your name:");
         String p2 = input.nextLine();
         int p2wins = 0;
-
-        int turn=0; 
         
-        String one="1", two="2", three="3",four="4",five="5",six="6",seven="7",eight="8",nine="9";
-        /*starting board
-        *1 | 2 | 3
-        *----------
-        *4 | 5 | 6
-        *----------
-        *7 | 8 | 9
-        */
-        String[] gameboard = new String[9];
+        String[]gameboard = new String[10];//including 0, so 10 is needed.
         gameboard[1] = "1";
         gameboard[2] = "2";
         gameboard[3] = "3";
@@ -40,11 +30,29 @@ public class TwoPlayer{
         gameboard[7] = "7";
         gameboard[8] = "8";
         gameboard[9] = "9";
+        /* starting game board
+        *1 | 2 | 3
+        *----------
+        *4 | 5 | 6
+        *----------
+        *7 | 8 | 9
+        */
         String printedGameBoard;
+        int turn=0;
         String again ="";
         String play ="";
         boolean playing = true;
+        
         while(playing){
+            gameboard[1] = "1";
+            gameboard[2] = "2";
+            gameboard[3] = "3";
+            gameboard[4] = "4";
+            gameboard[5] = "5";
+            gameboard[6] = "6";
+            gameboard[7] = "7";
+            gameboard[8] = "8";
+            gameboard[9] = "9";
             for(int r = 9; r>0; r--){
                 turn=r;
                 turn%=2;
@@ -55,54 +63,43 @@ public class TwoPlayer{
                         System.out.println(p1+"'s turn! Type a number to play your X!");
                         play = input.nextLine();
                         if(play.equals("1")&&!gameboard[1].equals("O")){
-                            one="X";
+                            gameboard[1]="X";
                             break;
                         }
                         else if(play.equals("2")&&!gameboard[2].equals("O")){
-                            two="X";
+                            gameboard[2]="X";
                             break;
                         }
                         else if(play.equals("3")&&!gameboard[3].equals("O")){
-                            three="X";
+                            gameboard[3]="X";
                             break;
                         }
                         else if(play.equals("4")&&!gameboard[4].equals("O")){
-                            four="X";
+                            gameboard[4]="X";
                             break;
                         }
                         else if(play.equals("5")&&!gameboard[5].equals("O")){
-                            five="X";
+                            gameboard[5]="X";
                             break;
                         }
                         else if(play.equals("6")&&!gameboard[6].equals("O")){
-                            six="X";
+                            gameboard[6]="X";
                             break;
                         }
                         else if(play.equals("7")&&!gameboard[7].equals("O")){
-                            seven="X";
+                            gameboard[7]="X";
                             break;
                         }
                         else if(play.equals("8")&&!gameboard[8].equals("O")){
-                            eight="X";
+                            gameboard[8]="X";
                             break;
                         }
                         else if(play.equals("9")&&!gameboard[9].equals("O")){
-                            nine="X";
+                            gameboard[9]="X";
                             break;
                         }
                     }
-                    CheckWinner.check(null);
-                    if (gameboard[1].equals(gameboard[4])&&gameboard[1].equals(gameboard[7])){
-                        if (one.equals("X")){
-                            System.out.println(p1 + " wins!");
-                            p1wins++;
-                        }
-                        else
-                        {
-                            System.out.println(p2 + " wins!");
-                            p2wins++;
-                        }
-                    }
+                    CheckWinner.checkX(null);
                 }
                 else if(turn==0){
                     System.out.println(printedGameBoard);
@@ -110,55 +107,44 @@ public class TwoPlayer{
                         System.out.println(p2+"'s turn! Type a letter to play your O!");
                         play = input.nextLine();
                         if(play.equals("1")&&!gameboard[1].equals("X")){
-                            one="O";
+                            gameboard[1]="O";
                             break;
                         }
                         else if(play.equals("2")&&!gameboard[2].equals("X")){
-                            two="O";
+                            gameboard[2]="O";
                             break;
                         }
                         else if(play.equals("3")&&!gameboard[3].equals("X")){
-                            three="O";
+                            gameboard[3]="O";
                             break;
                         }
                         else if(play.equals("4")&&!gameboard[4].equals("X")){
-                            four="O";
+                            gameboard[4]="O";
                             break;
                         }
                         else if(play.equals("5")&&!gameboard[5].equals("X")){
-                            five="O";
+                            gameboard[5]="O";
                             break;
                         }
                         else if(play.equals("6")&&!gameboard[6].equals("X")){
-                            six="O";
+                            gameboard[6]="O";
                             break;
                         }
                         else if(play.equals("7")&&!gameboard[7].equals("X")){
-                            seven="O";
+                            gameboard[7]="O";
                             break;
                         }
                         else if(play.equals("8")&&!gameboard[8].equals("X")){
-                            eight="O";
+                            gameboard[8]="O";
                             break;
                         }
                         else if(play.equals("9")&&!gameboard[9].equals("X")){
-                            nine="O";
+                            gameboard[9]="O";
                             break;
                         }
                     }
-                    if (gameboard[1].equals(gameboard[4])&&gameboard[1].equals(gameboard[7])){
-                        if (one.equals("X")){
-                            System.out.println(p1 + " wins!");
-                            p1wins++;
-                        }
-                        else
-                        {
-                            System.out.println(p2 + " wins!");
-                            p2wins++;
-                        }
-                    }
+                    CheckWinner.checkO(null);
                 }
-                
                 //win conditions here, dont forget to add to score
             }
             System.out.println("The score is "+p1+" with "+p1wins+" wins and "+p2+" with "+p2wins+" wins.\nWould you like to play agian? Y/N");
