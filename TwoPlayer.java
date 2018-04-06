@@ -14,11 +14,11 @@ public class TwoPlayer{
         
         System.out.println("Player 1, enter your name:");
         String p1 = input.nextLine();
-        int p1wins = 0;
+        int p1score = 0;
        
         System.out.println("Player 2, enter your name:");
         String p2 = input.nextLine();
-        int p2wins = 0;
+        int p2score = 0;
         
         String[]gameboard = new String[10]; //including 0, so 10 is needed.
         
@@ -34,7 +34,7 @@ public class TwoPlayer{
         String again ="";
         String play ="";
         boolean playing = true;
-        
+        boolean p1win, p2win;
         while(playing){
             gameboard[1] = "1";
             gameboard[2] = "2";
@@ -91,7 +91,11 @@ public class TwoPlayer{
                             break;
                         }
                     }
-                    CheckWinner.checkX(null);
+                    p1win = CheckWinner.checkX(gameboard); 
+                    if(p1win){
+                        p1score++;
+                        break;
+                    }
                 }
                 else if(turn==0){
                     System.out.println(printedGameBoard);
@@ -135,10 +139,14 @@ public class TwoPlayer{
                             break;
                         }
                     }
-                    CheckWinner.checkO(null);
+                    p2win = CheckWinner.checkO(gameboard);
+                    if(p2win){
+                        p2score++;
+                        break;
+                    }
                 }
             }
-            System.out.println("The score is "+p1+" with "+p1wins+" wins and "+p2+" with "+p2wins+" wins.\nWould you like to play agian? Y/N");
+            System.out.println("The score is "+p1+" with "+p1score+" wins and "+p2+" with "+p2score+" wins.\nWould you like to play agian? Y/N");
             again = input.nextLine();
             if(again.equals("N")){
                 System.out.println("Okay, goodbye. Thanks for playing!");

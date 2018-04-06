@@ -13,8 +13,8 @@ public class EasyComputer{
         
         System.out.println("Enter your name:");
         String name = input.nextLine();
-        int p1wins = 0;
-        int cwins = 0;
+        int p1score = 0;
+        int cscore = 0;
         
         String[]gameboard = new String[10];
         String printedGameBoard;
@@ -23,7 +23,7 @@ public class EasyComputer{
         String play ="";
         int cplay=0;
         boolean playing = true;
-        
+        boolean p1win, cwin;
         while(playing){
             gameboard[1] = "1";
             gameboard[2] = "2";
@@ -80,7 +80,11 @@ public class EasyComputer{
                             break;
                         }
                     }
-                    CheckWinner.checkX(null);
+                    p1win = CheckWinner.checkX(gameboard); 
+                    if(p1win){
+                        p1score++;
+                        break;
+                    }
                 }
                 else if(turn==0){
                     while(true){
@@ -123,10 +127,14 @@ public class EasyComputer{
                             break;
                         }
                     }
-                    CheckWinner.checkO(null);
+                    cwin = CheckWinner.checkX(gameboard); 
+                    if(cwin){
+                        cscore++;
+                        break;
+                    }
                 }
             }
-            System.out.println("The score is "+name+" with "+p1wins+" wins and I have "+cwins+" wins.\nWould you like to play agian? Y/N");
+            System.out.println("The score is "+name+" with "+p1score+" wins and I have "+cscore+" wins.\nWould you like to play agian? Y/N");
             again = input.nextLine();
             if(again.equals("N")){
                 System.out.println("Okay, goodbye. Thanks for playing!");
