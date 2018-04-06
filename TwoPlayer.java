@@ -1,8 +1,7 @@
 /*
  * extends TicTacToe.java
  * two player mode for TicTacToe.java
- *
- *test
+ * +
  *
  * @author Noah Krueger, Shardul Joshi
  * @version 4/5/18
@@ -20,15 +19,8 @@ public class TwoPlayer{
         String p2 = input.nextLine();
         int p2score = 0;
         
-        String[]gameboard = new String[10]; //including 0, so 10 is needed.
+        String[] gameboard = new String[10];
         
-        /* starting game board
-        *1 | 2 | 3
-        *----------
-        *4 | 5 | 6
-        *----------
-        *7 | 8 | 9
-        */
         String printedGameBoard;
         int turn=0;
         String again ="";

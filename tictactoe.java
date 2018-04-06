@@ -42,20 +42,23 @@ public class TicTacToe{
                 howto = true;
             if(select.equals("A"))
                 about = true;
-            if(select.equals("E"))
+            if(select.equals("E")){
+                System.out.println("GoodBye!");
                 break;
+            }
             while(play){
                 System.out.println("Players? (1) or (2)");
                 players = input.nextInt();
                 if(players == 1){
-                    oneplayer = true;
+                    /*oneplayer = true;
                     System.out.println("(E)asy computer or (H)ard computer?");
                     input.nextLine();
                     select= input.nextLine();
                     if(select.equals("E"))
                         EasyComputer.main(null);
                     if(select.equals("H"))
-                        HardComputer.main(null);
+                        HardComputer.main(null);*/
+                    EasyComputer.main(null);
                     break;
                 }
                 if(players == 2)
