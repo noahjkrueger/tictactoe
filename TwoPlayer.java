@@ -91,7 +91,7 @@ public class TwoPlayer{
                             break;
                         }
                     }
-                    CheckWinner.checkX(null);
+                    boolean win1 = CheckWinner.checkX(null);
                 }
                 else if(turn==0){
                     System.out.println(printedGameBoard);
@@ -135,9 +135,8 @@ public class TwoPlayer{
                             break;
                         }
                     }
-                    CheckWinner.checkO(null);
+                    boolean win2 = CheckWinner.checkO(null);
                 }
-                //win conditions here, dont forget to add to score
             }
             System.out.println("The score is "+p1+" with "+p1wins+" wins and "+p2+" with "+p2wins+" wins.\nWould you like to play agian? Y/N");
             again = input.nextLine();

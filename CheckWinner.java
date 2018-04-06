@@ -2,8 +2,8 @@
  * extends TicTacToe.java
  * checks for winner in TicTacToe.java
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Shardul Joshi, Noah Krueger
+ * @version 4/6/18
  */
 public class CheckWinner{
     public static boolean checkX(String[]gameboard){

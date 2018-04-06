@@ -52,12 +52,15 @@ public class TicTacToe{
                 if(players == 2)
                     TwoPlayer.main(null);
                 while(oneplayer){
-                    System.out.println("(E)asy or (H)ard computer?");
+                    System.out.println("(E)asy computer, (H)ard computer, or E(X)it?");
+                    input.nextLine();
                     select= input.nextLine();
                     if(select.equals("E"))
                         EasyComputer.main(null);
                     if(select.equals("H"))
                         HardComputer.main(null);
+                    if(select.equals("X"))
+                        break;
                 }
                 select="";
                 break;
