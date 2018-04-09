@@ -4,6 +4,4 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=v\ gameboard
 comment2.target=java.lang.String\ pickSpot(java.lang.String,\ java.lang.String[])
-comment3.params=
-comment3.target=void\ printSomething()
-numComments=4
+numComments=3

@@ -82,6 +82,7 @@ public class DifficultComputer{
                     }
                     p1win = CheckWinner.checkX(gameboard); 
                     if(p1win){
+                        System.out.println(printedGameBoard);
                         p1score++;
                         break;
                     }
@@ -129,6 +130,7 @@ public class DifficultComputer{
                     }
                     cwin = CheckWinner.checkX(gameboard); 
                     if(cwin){
+                        System.out.println(printedGameBoard);
                         cscore++;
                         break;
                     }
@@ -162,9 +164,5 @@ public class DifficultComputer{
             }
         }
         return "";
-    }
-    public static void printSomething(){
-        int i = 1;
-        System.out.println("(i+2)");
     }
 }
