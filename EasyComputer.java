@@ -82,6 +82,7 @@ public class EasyComputer{
                     }
                     p1win = CheckWinner.checkX(gameboard); 
                     if(p1win){
+                        System.out.println(printedGameBoard);
                         p1score++;
                         break;
                     }
@@ -129,12 +130,13 @@ public class EasyComputer{
                     }
                     cwin = CheckWinner.checkX(gameboard); 
                     if(cwin){
+                        System.out.println(printedGameBoard);
                         cscore++;
                         break;
                     }
                 }
             }
-            System.out.println("The score is "+name+" with "+p1score+" wins and I have "+cscore+" wins.\nWould you like to play agian? Y/N");
+            System.out.println("The score is "+name+" with "+p1score+" wins and me with "+cscore+" wins.\nWould you like to play agian? Y/N");
             again = input.nextLine();
             if(again.equals("N")){
                 System.out.println("Okay, goodbye. Thanks for playing!");
