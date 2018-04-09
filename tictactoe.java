@@ -8,10 +8,12 @@
  * if he choses one player, he is given the option of a easy or hard ai.
  * when the game is over, score is updated and is offered to play agian or exit to menu
  * 
- * extended to twoplayer.java, ttteasyai.java, ttthardai.java
+ * Extended by TwoPlayer.java, EasyComputer.java, (not directly) CheckWinner.java
+ * 
+ * Future featuyres- Difficult Computer, graphic interface
  * 
  * @author Noah Krueger, Shardul Joshi
- * @version (4/3/18)
+ * @version 1.0
  */
 import java.util.Scanner;
 import java.util.Random;

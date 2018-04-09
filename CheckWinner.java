@@ -1,5 +1,5 @@
 /*
- * extends TicTacToe.java
+ * extends TicTacToe.java (not directly)
  * checks for winner in TicTacToe.java
  *
  * @author Shardul Joshi, Noah Krueger

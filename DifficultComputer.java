@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 import java.util.Random;
-public class HardComputer{
+public class DifficultComputer{
     public static void main(String[]args){
         Scanner input = new Scanner(System.in);
         Random gen = new Random();
