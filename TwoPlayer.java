@@ -85,6 +85,7 @@ public class TwoPlayer{
                     }
                     p1win = CheckWinner.checkX(gameboard); 
                     if(p1win){
+                        System.out.println(printedGameBoard);
                         p1score++;
                         break;
                     }
@@ -133,6 +134,7 @@ public class TwoPlayer{
                     }
                     p2win = CheckWinner.checkO(gameboard);
                     if(p2win){
+                        System.out.println(printedGameBoard);
                         p2score++;
                         break;
                     }
