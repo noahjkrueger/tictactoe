@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=CheckWinner
-comment0.text=\r\n\ extends\ TicTacToe.java\r\n\ checks\ for\ winner\ in\ TicTacToe.java\r\n\r\n\ @author\ Shardul\ Joshi,\ Noah\ Krueger\r\n\ @version\ 4/6/18\r\n
+comment0.text=\r\n\ extends\ TicTacToe.java\ (not\ directly)\r\n\ checks\ for\ winner\ in\ TicTacToe.java\r\n\r\n\ @author\ Shardul\ Joshi,\ Noah\ Krueger\r\n\ @version\ 4/6/18\r\n
 comment1.params=gameboard
 comment1.target=boolean\ checkX(java.lang.String[])
 comment2.params=gameboard
